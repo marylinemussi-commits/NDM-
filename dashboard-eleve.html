@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Élève - NDM RP</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Dashboard -->
+    <nav class="dashboard-nav">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span>NDM RP - ENT</span>
+            </div>
+            <div class="nav-user">
+                <span id="userName">Élève</span>
+                <button class="btn-logout" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i> Déconnexion
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-menu">
+                <a href="#accueil" class="menu-item active" data-section="accueil">
+                    <i class="fas fa-home"></i> Accueil
+                </a>
+                <a href="#notes" class="menu-item" data-section="notes">
+                    <i class="fas fa-chart-line"></i> Notes
+                </a>
+                <a href="#devoirs" class="menu-item" data-section="devoirs">
+                    <i class="fas fa-tasks"></i> Devoirs
+                </a>
+                <a href="#emploi-temps" class="menu-item" data-section="emploi-temps">
+                    <i class="fas fa-calendar-alt"></i> Emploi du temps
+                </a>
+                <a href="#cahier-texte" class="menu-item" data-section="cahier-texte">
+                    <i class="fas fa-book"></i> Cahier de texte
+                </a>
+                <a href="#messagerie" class="menu-item" data-section="messagerie">
+                    <i class="fas fa-envelope"></i> Messagerie
+                </a>
+            </div>
+        </aside>
+
+        <!-- Contenu principal -->
+        <main class="dashboard-content">
+            <!-- Section Accueil -->
+            <section id="accueil" class="dashboard-section active">
+                <div class="section-header">
+                    <h1>Bienvenue, <span id="eleveName">Lucas</span> !</h1>
+                    <p>Classe : <strong id="eleveClasse">1ère A</strong></p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: #3b82f6;">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Moyenne générale</h3>
+                            <p class="stat-value" id="moyenneGenerale">14.5</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: #10b981;">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Devoirs rendus</h3>
+                            <p class="stat-value">12/15</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: #f59e0b;">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Devoirs à faire</h3>
+                            <p class="stat-value">3</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: #8b5cf6;">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Prochains cours</h3>
+                            <p class="stat-value">Mathématiques</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h2><i class="fas fa-bell"></i> Dernières actualités</h2>
+                        <div class="news-list">
+                            <div class="news-item">
+                                <span class="news-date">15 Jan</span>
+                                <p>Nouvelle note de Mathématiques disponible</p>
+                            </div>
+                            <div class="news-item">
+                                <span class="news-date">14 Jan</span>
+                                <p>Devoir de Français à rendre pour demain</p>
+                            </div>
+                            <div class="news-item">
+                                <span class="news-date">13 Jan</span>
+                                <p>Bulletin du 1er trimestre disponible</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h2><i class="fas fa-clock"></i> Prochains cours</h2>
+                        <div class="schedule-preview">
+                            <div class="schedule-item">
+                                <span class="schedule-time">08h00</span>
+                                <div class="schedule-details">
+                                    <strong>Mathématiques</strong>
+                                    <span>Salle 201 - M. Martin</span>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="schedule-time">10h00</span>
+                                <div class="schedule-details">
+                                    <strong>Français</strong>
+                                    <span>Salle 105 - Mme Dubois</span>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="schedule-time">14h00</span>
+                                <div class="schedule-details">
+                                    <strong>Histoire</strong>
+                                    <span>Salle 302 - M. Bernard</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Notes -->
+            <section id="notes" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Mes Notes</h1>
+                </div>
+
+                <div class="notes-container">
+                    <div class="notes-summary">
+                        <h2>Résumé du trimestre</h2>
+                        <div class="summary-grid">
+                            <div class="summary-item">
+                                <span>Moyenne générale</span>
+                                <strong>14.5/20</strong>
+                            </div>
+                            <div class="summary-item">
+                                <span>Rang de classe</span>
+                                <strong>8/25</strong>
+                            </div>
+                            <div class="summary-item">
+                                <span>Appréciation</span>
+                                <strong>Bien</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="notes-table-container">
+                        <table class="notes-table">
+                            <thead>
+                                <tr>
+                                    <th>Matière</th>
+                                    <th>Note</th>
+                                    <th>Coefficient</th>
+                                    <th>Date</th>
+                                    <th>Appréciation</th>
+                                </tr>
+                            </thead>
+                            <tbody id="notesTableBody">
+                                <!-- Les notes seront chargées dynamiquement -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Devoirs -->
+            <section id="devoirs" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Mes Devoirs</h1>
+                </div>
+
+                <div class="devoirs-container">
+                    <div class="devoirs-filters">
+                        <button class="filter-btn active" data-filter="all">Tous</button>
+                        <button class="filter-btn" data-filter="pending">À faire</button>
+                        <button class="filter-btn" data-filter="done">Rendus</button>
+                    </div>
+
+                    <div class="devoirs-list" id="devoirsList">
+                        <!-- Les devoirs seront chargés dynamiquement -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Emploi du temps -->
+            <section id="emploi-temps" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Emploi du Temps</h1>
+                </div>
+
+                <div class="schedule-container">
+                    <div class="schedule-table" id="scheduleTable">
+                        <!-- L'emploi du temps sera chargé dynamiquement -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Cahier de texte -->
+            <section id="cahier-texte" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Cahier de Texte</h1>
+                </div>
+
+                <div class="cahier-container" id="cahierContainer">
+                    <!-- Le cahier de texte sera chargé dynamiquement -->
+                </div>
+            </section>
+
+            <!-- Section Messagerie -->
+            <section id="messagerie" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Messagerie</h1>
+                </div>
+
+                <div class="messagerie-container">
+                    <div class="messages-list" id="messagesList">
+                        <!-- Les messages seront chargés dynamiquement -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/dashboard-eleve.js"></script>
+</body>
+</html>
+

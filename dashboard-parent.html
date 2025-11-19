@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Parent - NDM RP</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="dashboard-nav">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span>NDM RP - ENT</span>
+            </div>
+            <div class="nav-user">
+                <span id="userName">Parent</span>
+                <button class="btn-logout" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i> Déconnexion
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-menu">
+                <a href="#accueil" class="menu-item active" data-section="accueil">
+                    <i class="fas fa-home"></i> Accueil
+                </a>
+                <a href="#enfants" class="menu-item" data-section="enfants">
+                    <i class="fas fa-child"></i> Mes Enfants
+                </a>
+                <a href="#notes" class="menu-item" data-section="notes">
+                    <i class="fas fa-chart-line"></i> Notes
+                </a>
+                <a href="#absences" class="menu-item" data-section="absences">
+                    <i class="fas fa-calendar-times"></i> Absences
+                </a>
+                <a href="#messagerie" class="menu-item" data-section="messagerie">
+                    <i class="fas fa-envelope"></i> Messagerie
+                </a>
+            </div>
+        </aside>
+
+        <main class="dashboard-content">
+            <section id="accueil" class="dashboard-section active">
+                <div class="section-header">
+                    <h1>Bienvenue, <span id="parentName">Marie Dupont</span> !</h1>
+                </div>
+
+                <div class="content-card">
+                    <h2><i class="fas fa-child"></i> Mes Enfants</h2>
+                    <div class="content-card" style="margin-top: 20px;">
+                        <h3>Lucas Dupont - 1ère A</h3>
+                        <div class="stats-grid" style="margin-top: 15px;">
+                            <div class="stat-card">
+                                <div class="stat-icon" style="background: #3b82f6;">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Moyenne</h3>
+                                    <p class="stat-value">14.5/20</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon" style="background: #10b981;">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Devoirs rendus</h3>
+                                    <p class="stat-value">12/15</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon" style="background: #f59e0b;">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Absences</h3>
+                                    <p class="stat-value">2</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="enfants" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Mes Enfants</h1>
+                </div>
+                <div class="content-card">
+                    <p>Informations sur vos enfants...</p>
+                </div>
+            </section>
+
+            <section id="notes" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Notes de mes Enfants</h1>
+                </div>
+                <div class="content-card">
+                    <p>Consultation des notes...</p>
+                </div>
+            </section>
+
+            <section id="absences" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Absences</h1>
+                </div>
+                <div class="content-card">
+                    <p>Consultation des absences...</p>
+                </div>
+            </section>
+
+            <section id="messagerie" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Messagerie</h1>
+                </div>
+                <div class="content-card">
+                    <p>Messagerie avec les professeurs...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard-parent.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Professeur - NDM RP</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="dashboard-nav">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span>NDM RP - ENT</span>
+            </div>
+            <div class="nav-user">
+                <span id="userName">Professeur</span>
+                <button class="btn-logout" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i> Déconnexion
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-menu">
+                <a href="#accueil" class="menu-item active" data-section="accueil">
+                    <i class="fas fa-home"></i> Accueil
+                </a>
+                <a href="#classes" class="menu-item" data-section="classes">
+                    <i class="fas fa-users"></i> Mes Classes
+                </a>
+                <a href="#notes" class="menu-item" data-section="notes">
+                    <i class="fas fa-chart-line"></i> Saisie des notes
+                </a>
+                <a href="#devoirs" class="menu-item" data-section="devoirs">
+                    <i class="fas fa-tasks"></i> Devoirs
+                </a>
+                <a href="#cahier-texte" class="menu-item" data-section="cahier-texte">
+                    <i class="fas fa-book"></i> Cahier de texte
+                </a>
+            </div>
+        </aside>
+
+        <main class="dashboard-content">
+            <section id="accueil" class="dashboard-section active">
+                <div class="section-header">
+                    <h1>Bienvenue, <span id="profName">Sophie Martin</span> !</h1>
+                    <p>Matière : <strong>Mathématiques</strong></p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: #3b82f6;">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Classes</h3>
+                            <p class="stat-value">3</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: #10b981;">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Élèves</h3>
+                            <p class="stat-value">75</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: #f59e0b;">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Devoirs à corriger</h3>
+                            <p class="stat-value">12</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-card" style="margin-top: 30px;">
+                    <h2><i class="fas fa-bell"></i> Mes Classes</h2>
+                    <div class="classes-list">
+                        <div class="content-card" style="margin-bottom: 15px;">
+                            <h3>1ère A - Mathématiques</h3>
+                            <p>25 élèves | 3 devoirs en attente</p>
+                        </div>
+                        <div class="content-card" style="margin-bottom: 15px;">
+                            <h3>Terminale B - Mathématiques</h3>
+                            <p>28 élèves | 5 devoirs en attente</p>
+                        </div>
+                        <div class="content-card">
+                            <h3>2nde C - Mathématiques</h3>
+                            <p>22 élèves | 4 devoirs en attente</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="classes" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Mes Classes</h1>
+                </div>
+                <div class="content-card">
+                    <p>Liste des classes et élèves...</p>
+                </div>
+            </section>
+
+            <section id="notes" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Saisie des Notes</h1>
+                </div>
+                <div class="content-card">
+                    <p>Interface de saisie des notes...</p>
+                </div>
+            </section>
+
+            <section id="devoirs" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Gestion des Devoirs</h1>
+                    <button class="btn btn-primary" onclick="showCreateDevoirModal()">
+                        <i class="fas fa-plus"></i> Créer un devoir
+                    </button>
+                </div>
+
+                <div class="devoirs-container">
+                    <div class="devoirs-filters">
+                        <button class="filter-btn active" data-filter="all">Tous</button>
+                        <button class="filter-btn" data-filter="actif">Actifs</button>
+                        <button class="filter-btn" data-filter="termine">Terminés</button>
+                    </div>
+
+                    <div class="devoirs-list" id="profDevoirsList">
+                        <!-- Les devoirs seront chargés dynamiquement -->
+                    </div>
+                </div>
+            </section>
+
+            <section id="cahier-texte" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Cahier de Texte</h1>
+                </div>
+                <div class="content-card">
+                    <p>Remplir le cahier de texte...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/dashboard-prof.js"></script>
+</body>
+</html>
+

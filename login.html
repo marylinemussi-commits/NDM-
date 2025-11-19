@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - NDM RP</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h1>NDM RP</h1>
+                </div>
+                <p>Espace Numérique de Travail</p>
+            </div>
+
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="identifiant">
+                        <i class="fas fa-user"></i> Identifiant
+                    </label>
+                    <input 
+                        type="text" 
+                        id="identifiant" 
+                        name="identifiant" 
+                        placeholder="Votre identifiant"
+                        required
+                        autocomplete="username"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">
+                        <i class="fas fa-lock"></i> Mot de passe
+                    </label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        placeholder="Votre mot de passe"
+                        required
+                        autocomplete="current-password"
+                    >
+                </div>
+
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="remember">
+                        <span>Se souvenir de moi</span>
+                    </label>
+                    <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-login">
+                    <i class="fas fa-sign-in-alt"></i> Se connecter
+                </button>
+
+                <div id="errorMessage" class="error-message"></div>
+            </form>
+
+            <div class="login-footer">
+                <p>Comptes de démonstration :</p>
+                <div class="demo-accounts">
+                    <button class="demo-btn" data-role="eleve">
+                        <i class="fas fa-user-graduate"></i> Élève
+                    </button>
+                    <button class="demo-btn" data-role="professeur">
+                        <i class="fas fa-chalkboard-teacher"></i> Professeur
+                    </button>
+                    <button class="demo-btn" data-role="parent">
+                        <i class="fas fa-users"></i> Parent
+                    </button>
+                    <button class="demo-btn" data-role="admin">
+                        <i class="fas fa-user-shield"></i> Admin
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="login-info">
+            <h2>Bienvenue sur l'ENT NDM RP</h2>
+            <p>Accédez à votre espace personnel pour consulter :</p>
+            <ul>
+                <li><i class="fas fa-check"></i> Vos notes et bulletins</li>
+                <li><i class="fas fa-check"></i> Votre emploi du temps</li>
+                <li><i class="fas fa-check"></i> Vos devoirs et travaux</li>
+                <li><i class="fas fa-check"></i> Les actualités de l'établissement</li>
+                <li><i class="fas fa-check"></i> La messagerie interne</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
+

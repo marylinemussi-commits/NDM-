@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Administrateur - NDM RP</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="dashboard-nav">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span>NDM RP - Administration</span>
+            </div>
+            <div class="nav-user">
+                <span id="userName">Administrateur</span>
+                <button class="btn-logout" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i> Déconnexion
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-menu">
+                <a href="#accueil" class="menu-item active" data-section="accueil">
+                    <i class="fas fa-home"></i> Accueil
+                </a>
+                <a href="#utilisateurs" class="menu-item" data-section="utilisateurs">
+                    <i class="fas fa-users"></i> Utilisateurs
+                </a>
+                <a href="#classes" class="menu-item" data-section="classes">
+                    <i class="fas fa-door-open"></i> Classes
+                </a>
+                <a href="#parametres" class="menu-item" data-section="parametres">
+                    <i class="fas fa-cog"></i> Paramètres
+                </a>
+            </div>
+        </aside>
+
+        <main class="dashboard-content">
+            <section id="accueil" class="dashboard-section active">
+                <div class="section-header">
+                    <h1>Panneau d'Administration</h1>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: #3b82f6;">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Élèves</h3>
+                            <p class="stat-value">450</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: #10b981;">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Professeurs</h3>
+                            <p class="stat-value">50</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: #f59e0b;">
+                            <i class="fas fa-door-open"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Classes</h3>
+                            <p class="stat-value">18</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: #8b5cf6;">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Parents</h3>
+                            <p class="stat-value">380</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="utilisateurs" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Gestion des Utilisateurs</h1>
+                </div>
+                <div class="content-card">
+                    <p>Gérer les utilisateurs du système...</p>
+                </div>
+            </section>
+
+            <section id="classes" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Gestion des Classes</h1>
+                </div>
+                <div class="content-card">
+                    <p>Gérer les classes...</p>
+                </div>
+            </section>
+
+            <section id="parametres" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Paramètres du Système</h1>
+                </div>
+                <div class="content-card">
+                    <p>Configuration du système...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard-admin.js"></script>
+</body>
+</html>
+
