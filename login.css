@@ -1,0 +1,241 @@
+/* Page de connexion */
+.login-page {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+    width: 100%;
+    gap: 40px;
+    align-items: center;
+}
+
+.login-box {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.login-header .logo i {
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.login-header h1 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.login-header p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.login-form {
+    margin-top: 30px;
+}
+
+.login-form .form-group {
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.login-form label i {
+    color: var(--primary-color);
+}
+
+.login-form input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    cursor: pointer;
+}
+
+.forgot-password {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.forgot-password:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.error-message {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    display: none;
+    margin-top: 15px;
+}
+
+.error-message.show {
+    display: block;
+}
+
+.login-footer {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.login-footer p {
+    color: var(--text-light);
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.demo-accounts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.demo-btn {
+    padding: 12px;
+    background: var(--bg-light);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--text-dark);
+}
+
+.demo-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.login-info {
+    color: white;
+    padding: 20px;
+}
+
+.login-info h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.login-info p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.login-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.login-info ul li {
+    padding: 12px 0;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.login-info ul li i {
+    color: #10b981;
+    font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .login-container {
+        grid-template-columns: 1fr;
+    }
+
+    .login-info {
+        display: none;
+    }
+
+    .login-box {
+        padding: 30px 20px;
+    }
+
+    .demo-accounts {
+        grid-template-columns: 1fr;
+    }
+}
+
