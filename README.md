@@ -93,9 +93,13 @@ Consultez le fichier **`TUTORIEL_HEBERGEMENT_GRATUIT.md`** pour un guide complet
 
 ### 🌍 Option 2 : Avec domaine .fr
 
-Consultez le fichier **`TUTORIEL_HEBERGEMENT_FR.md`** pour un guide complet avec un nom de domaine .fr.
+**Avec GitHub Pages :**
+- Consultez le fichier **`TUTORIEL_GITHUB_PAGES_DOMAINE_FR.md`** pour un guide complet avec GitHub Pages + domaine .fr
+- **Coût :** 8-15€/an pour le domaine (hébergement 100% gratuit)
 
-**Coût :** 8-15€/an pour le domaine (hébergement reste gratuit avec Netlify)
+**Avec Netlify :**
+- Consultez le fichier **`TUTORIEL_HEBERGEMENT_FR.md`** pour un guide complet avec Netlify + domaine .fr
+- **Coût :** 8-15€/an pour le domaine (hébergement 100% gratuit)
 
 ### Options rapides :
 
@@ -104,10 +108,11 @@ Consultez le fichier **`TUTORIEL_HEBERGEMENT_FR.md`** pour un guide complet avec
    - HTTPS automatique
    - Support de domaines personnalisés
 
-2. **GitHub Pages** (100% Gratuit)
+2. **GitHub Pages** (100% Gratuit) ⭐ Avec domaine .fr
    - Uploadez sur GitHub
    - Activez GitHub Pages
    - URL : `votre-nom.github.io/ndm-rp-site`
+   - **Guide complet :** `TUTORIEL_GITHUB_PAGES_DOMAINE_FR.md`
 
 3. **Vercel** (100% Gratuit)
    - Interface moderne
